@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "accounter"
+version = "0.0.1"
+description = ""
+authors = ["bluepython508 <bluepython508@noreply.users.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+briefcase = "^0.3.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.briefcase]
+project_name = "Accounter"
+bundle = "net.soroos.ben"
+version = "0.0.1"
+url = "https://github.com/bluepython508/Accounter"
+license = "BSD license"
+author = 'bluepython508'
+author_email = "bluepython508@noreply.users.github.com"
+
+[tool.briefcase.app.accounter]
+formal_name = "Accounter"
+description = "An app to help keep track of your money"
+icon = "src/accounter/resources/accounter"
+sources = ['src/accounter']
+requires = []
+
+
+[tool.briefcase.app.accounter.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.accounter.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.accounter.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.accounter.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.accounter.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
