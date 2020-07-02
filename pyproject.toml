@@ -11,6 +11,10 @@ setuptools = ">=45"
 [tool.poetry.dev-dependencies]
 briefcase = "^0.3.1"
 
+[build-system]
+requires = ["poetry_core>=0.12"]
+build-backend = "poetry.masonry.api"
+
 [tool.briefcase]
 project_name = "Accounter"
 bundle = "net.soroos.ben"
@@ -60,7 +64,3 @@ requires = [
 requires = [
     'toga-android>=0.3.0.dev20',
 ]
-[build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
-
